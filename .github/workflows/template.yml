@@ -7,14 +7,6 @@ jobs:
   call-aks-template:
     runs-on: ubuntu-latest
     steps:
-
-      - name: Checkout Repository (DevSecOps-scripts)
-        uses: actions/checkout@v3
-        with:
-          repository: test-craizy/DevSecOps-scripts
-          token: ${{ secrets.GH_TOKEN }}
-          path: DevSecOps-scripts
-
       - name: Call Reusable Workflow
         uses: ./DevSecOps-scripts/.github/workflows/workflow-aks-template.yml
         with:
