@@ -8,3 +8,4 @@ jobs:
     uses: test-craizy/DevSecOps-scripts/.github/workflows/workflow-aks-template.yml@main
     with:
       componente: "backend-service"
+      token: ${{ secrets.GH_TOKEN }}
