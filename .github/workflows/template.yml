@@ -8,3 +8,10 @@ jobs:
     uses: test-craizy/DevSecOps-scripts/.github/workflows/workflow-aks-template.yml@main
     with:
       componente: "backend-service"
+
+resources:
+  repositories:
+    - repository: DevSecOps-scripts
+      type: git
+      name: test-craizy/DevSecOps-scripts
+      ref: main
