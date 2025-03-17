@@ -1,13 +1,10 @@
-name: AKS Workflow Execution
+name: 🚀 AKS Workflow Execution
 
 on:
   workflow_dispatch:
 
 jobs:
   call-aks-template:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Call Reusable Workflow
-        uses: ./DevSecOps-scripts/.github/workflows/workflow-aks-template.yml
-        with:
-          componente: "backend-service"
+    uses: test-craizy/DevSecOps-scripts/.github/workflows/workflow-aks-template.yml@main
+    with:
+      componente: "backend-service"
