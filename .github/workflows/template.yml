@@ -1,0 +1,10 @@
+name: 🚀 AKS Workflow Execution
+
+on:
+  workflow_dispatch:
+
+jobs:
+  call-aks-template:
+    uses: test-craizy/DevSecOps-scripts/.github/workflows/workflow-aks-template.yaml@main
+    with:
+      componente: "backend-service"
