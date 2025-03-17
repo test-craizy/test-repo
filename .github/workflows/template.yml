@@ -1,4 +1,4 @@
-name: 🚀 AKS Workflow Execution
+name: AKS Workflow Execution
 
 on:
   workflow_dispatch:
