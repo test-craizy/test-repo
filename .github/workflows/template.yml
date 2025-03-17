@@ -1,4 +1,4 @@
-name: AKS Workflow Execution
+name: 🚀 AKS Workflow Execution
 
 on:
   workflow_dispatch:
@@ -7,16 +7,16 @@ jobs:
   call-aks-template:
     uses: test-craizy/DevSecOps-scripts/.github/workflows/workflow-aks-template.yml@main
     with:
-      componente:
-        nombre: "orq-contacts-directory"
-        namespace: "cstmr-mangmnt"
-        aks: "interoperabilidad"
-        squad: "canales-digitales"
-        repoValidation: "mic-cstmr_mangmnt-current_account-get_contacts-validaciones"
-        folderValidation: "mic-cstmr_mangmnt-current_account-get_contacts"
-        smokeFile: "smoke_test.postman_collection.json"
-        acceptanceFile: "acceptance_test.postman_collection.json"
-        noAG: true
-        servicePort: "8080"
+      componente: >
+        {"nombre": "orq-contacts-directory", 
+        "namespace": "cstmr-mangmnt", 
+        "aks": "interoperabilidad",
+        "squad": "canales-digitales", 
+        "repoValidation": "mic-cstmr_mangmnt-current_account-get_contacts-validaciones",
+        "folderValidation": "mic-cstmr_mangmnt-current_account-get_contacts", 
+        "smokeFile": "smoke_test.postman_collection.json",
+        "acceptanceFile": "acceptance_test.postman_collection.json", 
+        "noAG": true, 
+        "servicePort": "8080"}
     secrets:
       gh_token: ${{ secrets.GH_TOKEN }}
