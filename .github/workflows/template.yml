@@ -5,13 +5,17 @@ on:
 
 jobs:
   call-aks-template:
-    uses: test-craizy/DevSecOps-scripts/.github/workflows/workflow-aks-template.yml@main
-    with:
-      componente: "backend-service"
+    runs-on: ubuntu-latest
+    steps:
 
-resources:
-  repositories:
-    - repository: DevSecOps-scripts
-      type: git
-      name: test-craizy/DevSecOps-scripts
-      ref: main
+      - name: Checkout Repository (DevSecOps-scripts)
+        uses: actions/checkout@v3
+        with:
+          repository: test-craizy/DevSecOps-scripts
+          token: ${{ secrets.GH_PAT }}
+          path: DevSecOps-scripts
+
+      - name: Call Reusable Workflow
+        uses: ./DevSecOps-scripts/.github/workflows/workflow-aks-template.yml
+        with:
+          componente: "backend-service"
