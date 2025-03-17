@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  call-aks-template:
+  template:
     uses: test-craizy/DevSecOps-scripts/.github/workflows/workflow-aks-template.yml@main
     with:
       componente: "backend-service"
