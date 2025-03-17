@@ -9,4 +9,4 @@ jobs:
     with:
       componente: "backend-service"
     secrets:
-      token: ${{ secrets.GH_TOKEN }}
+      gh_token: ${{ secrets.GH_TOKEN }}
